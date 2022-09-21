@@ -7,7 +7,7 @@ export const GithubIcon: FC = () => {
             target="_blank"
             rel="noreferrer"
         >
-            点个✨不迷路 @StreakingMan
+            zhangen 原始项目@StreakingMan
             <svg
                 height="24"
                 aria-hidden="true"
