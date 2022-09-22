@@ -12,11 +12,10 @@ import { randomString, waitTimeout } from './utils';
 import { defaultTheme } from './themes/default';
 import { Icon, Theme } from './themes/interface';
 import { fishermanTheme } from './themes/fisherman';
-import { jinlunTheme } from './themes/jinlun';
-import { ikunTheme } from './themes/ikun';
+
 
 // 主题
-const themes = [fishermanTheme, defaultTheme, jinlunTheme, ikunTheme];
+const themes = [fishermanTheme, defaultTheme];
 
 // 最大关卡
 const maxLevel = 10;
