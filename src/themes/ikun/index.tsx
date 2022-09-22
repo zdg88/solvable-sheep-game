@@ -39,7 +39,7 @@ const sounds: { name: SoundNames; src: string }[] = [
     { name: '篮球击地', src: boom },
 ];
 
-const imagesUrls = import.meta.glob('./images/*.png', {
+const imagesUrls = import.meta.glob('./images/*.jpg', {
     import: 'default',
     eager: true,
 });

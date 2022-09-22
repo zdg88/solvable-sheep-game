@@ -3,7 +3,7 @@ import React from 'react';
 import { Theme } from '../interface';
 import { DefaultSoundNames, defaultSounds } from '../default';
 
-const imagesUrls = import.meta.glob('./images/*.png', {
+const imagesUrls = import.meta.glob('./images/*.jpg', {
     import: 'default',
     eager: true,
 });

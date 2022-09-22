@@ -11,7 +11,7 @@ const sounds = Object.entries(soundUrls).map(([key, value]) => ({
     src: value,
 })) as Theme<string>['sounds'];
 
-const imagesUrls = import.meta.glob('./images/*.png', {
+const imagesUrls = import.meta.glob('./images/*.jpg', {
     import: 'default',
     eager: true,
 });
