@@ -16,10 +16,10 @@ import { jinlunTheme } from './themes/jinlun';
 import { ikunTheme } from './themes/ikun';
 
 // 主题
-const themes = [defaultTheme, fishermanTheme, jinlunTheme, ikunTheme];
+const themes = [fishermanTheme, defaultTheme, jinlunTheme, ikunTheme];
 
 // 最大关卡
-const maxLevel = 50;
+const maxLevel = 10;
 
 interface MySymbol {
     id: string;
@@ -145,7 +145,7 @@ const Symbol: FC<SymbolProps> = ({ x, y, icon, isCover, status, onClick }) => {
 };
 
 const App: FC = () => {
-    const [curTheme, setCurTheme] = useState<Theme<any>>(defaultTheme);
+    const [curTheme, setCurTheme] = useState<Theme<any>>(fishermanTheme);
     const [scene, setScene] = useState<Scene>(makeScene(1, curTheme.icons));
     const [level, setLevel] = useState<number>(1);
     const [queue, setQueue] = useState<MySymbol[]>([]);
@@ -280,9 +280,9 @@ const App: FC = () => {
             return;
         }
         setFinished(false);
-        setLevel(level + 1);
+        setLevel(level + 2);
         setQueue([]);
-        checkCover(makeScene(level + 1, curTheme.icons));
+        checkCover(makeScene(level + 2, curTheme.icons));
     };
 
     // 重开
@@ -357,9 +357,9 @@ const App: FC = () => {
                 return;
             }
             // 升级
-            setLevel(level + 1);
+            setLevel(level + 2);
             setQueue([]);
-            checkCover(makeScene(level + 1, curTheme.icons));
+            checkCover(makeScene(level + 2, curTheme.icons));
         } else {
             setQueue(updateQueue);
             checkCover(updateScene);
@@ -370,7 +370,7 @@ const App: FC = () => {
 
     return (
         <>
-            <h2>有解的羊了个羊(DEMO)</h2>
+            <h2>伊了个伊</h2>
             <h6>
                 <GithubIcon />
             </h6>
@@ -387,7 +387,7 @@ const App: FC = () => {
                         </option>
                     ))}
                 </select>
-                Level: {level}
+                爱伊伊等级: {level}
             </h3>
 
             <div className="app">
