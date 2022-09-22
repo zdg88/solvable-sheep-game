@@ -19,7 +19,7 @@ import { ikunTheme } from './themes/ikun';
 const themes = [fishermanTheme, defaultTheme, jinlunTheme, ikunTheme];
 
 // 最大关卡
-const maxLevel = 50;
+const maxLevel = 10;
 
 interface MySymbol {
     id: string;
@@ -280,9 +280,9 @@ const App: FC = () => {
             return;
         }
         setFinished(false);
-        setLevel(level + 1);
+        setLevel(level + 2);
         setQueue([]);
-        checkCover(makeScene(level + 1, curTheme.icons));
+        checkCover(makeScene(level + 2, curTheme.icons));
     };
 
     // 重开
@@ -357,9 +357,9 @@ const App: FC = () => {
                 return;
             }
             // 升级
-            setLevel(level + 1);
+            setLevel(level + 2);
             setQueue([]);
-            checkCover(makeScene(level + 1, curTheme.icons));
+            checkCover(makeScene(level + 2, curTheme.icons));
         } else {
             setQueue(updateQueue);
             checkCover(updateScene);
@@ -387,7 +387,7 @@ const App: FC = () => {
                         </option>
                     ))}
                 </select>
-                Level: {level}
+                爱伊伊等级: {level}
             </h3>
 
             <div className="app">
